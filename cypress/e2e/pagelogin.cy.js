@@ -11,13 +11,13 @@ describe("login",()=>{
    
     beforeEach(() => {
 
-      loginpage.visit()
+      cy.visit("https://www.saucedemo.com/")
 
     })
     it("un coorect pw correct",()=>{
         
-       loginpage.enterUsername("Admin");
-        loginpage.enterPassword("admin123");
+       loginpage.enterUsername("standard_user");
+        loginpage.enterPassword("secret_sauce");
         loginpage.submit
       loginpage.verifyDashboard     
         
@@ -26,7 +26,7 @@ describe("login",()=>{
 
     it("should display an error message with incorrect password", () => {
        
-        loginpage.enterUsername("Admin");
+        loginpage.enterUsername("standard_user");
         loginpage.enterPassword("admin3");
         loginpage.submit
         loginpage.verifyMessageerror
@@ -34,8 +34,8 @@ describe("login",()=>{
     });
     it("should display an error message with incorrect username", () => {
        
-        loginpage.enterUsername("adm");
-        loginpage.enterPassword("admin3");
+        loginpage.enterUsername("_user");
+        loginpage.enterPassword("secret_sauce");
         loginpage.submit
         loginpage.verifyMessageerror
     });
