@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-class produit {
+class Produit {
     elements= {
         swagLabs: ()=> cy.get("#header_container > div.primary_header > div.header_label > div"),
        
@@ -17,4 +17,4 @@ class produit {
         this.elements.boutonBackHome().click();
     }
 }
-export default new produit();
+export default new Produit();
