@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-
 export class CartPage {
   item = {
     cartItems: () => cy.get(".cart_item"),
