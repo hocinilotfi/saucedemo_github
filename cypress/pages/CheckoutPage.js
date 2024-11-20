@@ -2,7 +2,7 @@
 import { faker } from "@faker-js/faker";
 
 class CheckoutPage {
-  e = {
+  element = {
     firstNameField: () => cy.get('[data-test="firstName"]'),
     lastNameField: () => cy.get('[data-test="lastName"]'),
     postalCodeField: () => cy.get('[data-test="postalCode"]'),
@@ -16,23 +16,23 @@ class CheckoutPage {
     const lastName = faker.person.lastName();
     const postalCode = faker.location.zipCode();
 
-    this.e.firstNameField().type(firstName);
-    this.e.lastNameField().type(lastName);
-    this.e.postalCodeField().type(postalCode);
+    this.element.firstNameField().type(firstName);
+    this.element.lastNameField().type(lastName);
+    this.element.postalCodeField().type(postalCode);
   }
 
   submitForm() {
-    this.e.continueButton().click();
+    this.element.continueButton().click();
     cy.url().should('include', '/checkout-step-two.html');
 
   }
   finishButton() {
-    this.e.finishButton().click();
+    this.element.finishButton().click();
     cy.url().should('include', '/checkout-complete.html');
 
   }
   backToProducts() {
-    this.e.backHomeButton().click();
+    this.element.backHomeButton().click();
     cy.url().should('include', '/inventory.html');
 
   }
