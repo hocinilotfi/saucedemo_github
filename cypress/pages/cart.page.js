@@ -19,6 +19,7 @@ export class CartPage {
             itemData.name = name;
 
             // Recherche de la description après avoir enveloppé firstItem avec cy.wrap
+            //Commentaire pour Idir
             cy.wrap(firstItem)
               .find(".inventory_item_desc")
               .invoke("text")
