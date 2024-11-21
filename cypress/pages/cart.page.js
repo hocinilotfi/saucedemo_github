@@ -37,7 +37,6 @@ export class CartPage {
                       .invoke("text")
                       .then((quantity) => {
                         itemData.quantity = quantity;
-
                         return itemData;
                       });
                   });
