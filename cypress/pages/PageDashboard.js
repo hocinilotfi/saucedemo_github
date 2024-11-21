@@ -3,6 +3,7 @@ class PageDashboard {
   element = {
     
     text: () => cy.get("h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module"),
+    
   }
 
   verifyDashboard() {
