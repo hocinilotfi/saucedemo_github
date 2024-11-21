@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-import PageLogin from "./PageLogin";
-import RemoveInCart from "./RemoveInCart";
+import PageLogin from "../pages/PageLogin";
+import RemoveInCart from "../pages/RemoveInCart";
 
 describe('Tests Saucedemo - Remove functionality', () => {
     before(() => {
