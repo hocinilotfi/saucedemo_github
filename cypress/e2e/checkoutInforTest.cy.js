@@ -5,7 +5,7 @@ import PageLogin from "../pages/PageLogin";
 import Produit from "../pages/Produit";
 import panier from "../pages/RemoveInCart";
 
-describe("checkout overview test", () => {
+describe("checkout infor test", () => {
   const loginpage = new PageLogin();
 
   const checkout = new CheckoutPage();
@@ -13,7 +13,7 @@ describe("checkout overview test", () => {
   beforeEach(() => {
     cy.visit("https://www.saucedemo.com/");
   });
-  it("checkout overview test", () => {
+  it("checkout infor test", () => {
     loginpage.Login("standard_user", "secret_sauce");
     cy.url().should("include", "/inventory.html");
     Produit.boutonAjout();
