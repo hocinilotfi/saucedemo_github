@@ -10,6 +10,8 @@ class CheckoutPage {
     continueButton: () => cy.get('[data-test="continue"]'),
     finishButton: () => cy.get("#finish"),
     backHomeButton: () => cy.get('[data-test="back-to-products"]'),
+    backCancel : () => cy.get("[data-test='cancel']"),
+    ButtonChekout : () => cy.get("#checkout"),
   };
 
   fillCheckoutForm() {
@@ -36,6 +38,17 @@ class CheckoutPage {
     this.element.backHomeButton().click();
     cy.url().should('include', '/inventory.html');
 
+  }
+
+  clickbackCancel(){
+
+    this.element.backCancel().click();
+  }
+
+
+  ButtonChekout(){
+
+    this.element.ButtonChekout().click();
   }
 }
 
