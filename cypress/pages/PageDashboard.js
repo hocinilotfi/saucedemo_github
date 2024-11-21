@@ -5,6 +5,7 @@ class PageDashboard {
     susccesLoginText: () => cy.get(".title"),
     cartButton: () => cy.get("a.shopping_cart_link"),
     inventoryItems: () => cy.get(".inventory_item"),
+    
   };
 
   verifyDashboard() {
