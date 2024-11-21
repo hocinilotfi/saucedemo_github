@@ -11,6 +11,7 @@ class PageDashboard {
 
   item = {
     inventoryItems: () => cy.get(".inventory_item"),
+    
   };
 
   verifyDashboard() {
