@@ -3,13 +3,7 @@ class PageDashboard {
     text: () =>
       cy.get("h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module"),
     susccesLoginText: () => cy.get(".title"),
-  };
-
-  button = {
     cartButton: () => cy.get("a.shopping_cart_link"),
-  };
-
-  item = {
     inventoryItems: () => cy.get(".inventory_item"),
   };
 
@@ -26,12 +20,12 @@ class PageDashboard {
   }
 
   clickOnCartButton() {
-    this.button.cartButton().click();
+    this.element.cartButton().click();
   }
 
   addFirstItemToCart() {
     let itemData = {};
-    return this.item
+    return this.element
       .inventoryItems()
       .first() // Récupère le premier élément
       .then((firstItem) => {
