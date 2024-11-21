@@ -1,8 +1,11 @@
 @echo off
 echo Running Cypress tests...
+echo Running Login tests...
 npx cypress run --spec cypress/e2e/loginTest.cy.js
-npx cypress run --spec cypress/e2e/test2.cy.js
-npx cypress run --spec cypress/e2e/testRemove.js
-npx cypress run --spec cypress/e2e/test4.cy.js
+echo Running  Add to Cart tests...
+npx cypress run --spec cypress/e2e/addCart.cy.js
+echo Running  Checkout tests...
+npx cypress run --spec cypress/e2e/return.Chekout.cy.js
+
 echo Tests completed!
 pause
