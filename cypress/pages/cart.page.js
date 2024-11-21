@@ -1,12 +1,12 @@
 /// <reference types="cypress" />
 export class CartPage {
-  item = {
+  element = {
     cartItems: () => cy.get(".cart_item"),
   };
 
   getFirstItemToCart() {
     let itemData = {};
-    return this.item
+    return this.element
       .cartItems()
       .first() // Récupère le premier élément
       .then((firstItem) => {
