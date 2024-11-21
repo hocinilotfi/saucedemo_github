@@ -7,7 +7,7 @@ class Remove {
         sacADos: () => cy.get("#item_4_title_link > div"),
         buttonAjout:() => cy.get("#add-to-cart"),
         panier:() => cy.get(".shopping_cart_link"),
-        buttonRemove: () => cy.get("#remove-sauce-labs-bike-light"),
+        buttonRemove: () => cy.get(".btn.btn_secondary.btn_small.cart_button"),
         }
         
     cliquerSac(){
